@@ -93,24 +93,6 @@ class _QrCodeScanState extends State<QrCodeScan> {
     );
   }
 
-  _showBottomSheet(BuildContext context) {
-    Get.bottomSheet(
-      Container(
-        padding: EdgeInsets.all(25),
-        height: MediaQuery.of(context).size.height * 0.5,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SelectableText(
-              barCode != null ? barCode!.code.toString() : "Scanning...",
-              style: TextStyle(fontSize: 24, color: Colors.white),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   _buildResult() => Container(
         decoration: BoxDecoration(color: Colors.white24),
         padding: EdgeInsets.all(15),
